@@ -26,6 +26,15 @@ const person3={
     color:"brown"
 }
 
+const fruits=[
+    ["apples",300],
+    ["banana",200],
+    ["mango",250]
+];
+const myObj2= Object.fromEntries(fruits);
+document.getElementById("demo4").innerHTML=myObj2.mango;
+
+
 const x=person3;
 x.age="17";
 document.getElementById("demo3").innerHTML=person3.firstName +" er "+person3.age +" years"
