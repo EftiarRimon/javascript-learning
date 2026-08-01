@@ -9,7 +9,7 @@ const person={
 };
 
 const man=Object.create(person);
-man.firstName="Tushar"
+man.firstName="Tusharr"
 
 const players=[
     ["Messi", 10],
@@ -18,6 +18,17 @@ const players=[
     ["Iniesta",8],
     ["Xavi",6]
 ];
+
+const person3={
+    firstName:"Tawsif",
+    lastName:"ahmed",
+    age:"20",
+    color:"brown"
+}
+
+const x=person3;
+x.age="17";
+document.getElementById("demo3").innerHTML=person3.firstName +" er "+person3.age +" years"
 const myObj=Object.fromEntries(players);
 document.getElementById("demo1").innerHTML=myObj.Messi;
 
