@@ -13,4 +13,20 @@ Object.assign(person1,person2);
 
 let text=Object.assign(person1,person2);
 
-document.getElementById("demo").innerHTML=JSON.stringify(text);
+document.getElementById("demo4").innerHTML=JSON.stringify(text);
+
+
+
+
+const fruits = {
+    Bananas : 300,
+    Oranges:200, 
+    apples: 500
+};
+
+
+for (let [fruit, amount] of Object.entries(fruits)){
+    textt+=fruit+":"+amount+"<br>";
+}
+
+document.getElementById("demo").innerHTML= textt;
