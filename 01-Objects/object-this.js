@@ -33,3 +33,23 @@ let x=person4.fullName.call(person2);
 
 document.getElementById("demo3").innerHTML=x;
 
+
+const person5 ={
+    firstName:"John",
+    lastName:"Abraham",
+    fullName: function (){
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+const member={
+    firstName:"Lionel",
+    lastName:"Messi"
+}
+
+let fullName=person5.fullName(member);
+
+document.getElementById("demo").innerHTML=fullName;
+
+
+
