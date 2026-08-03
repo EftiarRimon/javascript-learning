@@ -13,4 +13,16 @@ document.getElementById("demo").innerHTML=player.name+" playes for: "+ player.te
 
 
 
-const mySelf
+const mySelf = {
+    name : "rimon",
+    age: "27",
+    nationality:"BD",
+    wife:"",
+
+    set partner(value){
+        this.wife=value;
+    }
+};
+mySelf.partner="Abida";
+
+document.getElementById("demo1").innerHTML=mySelf.wife;
