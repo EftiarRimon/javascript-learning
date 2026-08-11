@@ -26,3 +26,14 @@ const mySelf = {
 mySelf.partner="Abida";
 
 document.getElementById("demo1").innerHTML=mySelf.wife;
+
+
+const person={
+    name: "Towhidul",
+    wife:"rasa",
+    couple: function(){
+        return this.name+ " "+this.wife;
+    }
+};
+
+document.getElementById("demo2").innerHTML=person.couple();
