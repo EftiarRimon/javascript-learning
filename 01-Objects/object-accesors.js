@@ -37,3 +37,30 @@ const person={
 };
 
 document.getElementById("demo2").innerHTML=person.couple();
+
+
+const country={
+    1:"east pak",
+    2:"west pak",
+
+    get fullCountry(){
+        return this[1]+" "+this[2];
+
+    }
+};
+
+document.getElementById("demo3").innerHTML=country.fullCountry;
+
+
+const language={
+    Bangladesh:"Bangali",
+    India:"Hindi",
+    Pakistan:"urdu",
+    SriLanka:"Tamil",
+
+    get banLang(){
+        return this.Bangladesh.toUpperCase();
+    }
+}
+
+document.getElementById("demo4").innerHTML=language.banLang;
