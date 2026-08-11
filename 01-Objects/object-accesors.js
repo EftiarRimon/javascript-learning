@@ -64,3 +64,18 @@ const language={
 }
 
 document.getElementById("demo4").innerHTML=language.banLang;
+
+
+const club ={
+    spanish :"Barca",
+    england :"ManCity",
+    german :"Bayern",
+    french:"",
+
+    set team(team){
+        this.french=team.toUpperCase()
+    }
+}
+club.team="psg"
+
+document.getElementById("demo5").innerHTML=club.french;
