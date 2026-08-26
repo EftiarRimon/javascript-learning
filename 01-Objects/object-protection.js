@@ -26,5 +26,10 @@ try{
 catch (err){
     text2=err;
 };
+let answer = Object.isExtensible(person);
 
-document.getElementById("demo2").innerHTML=text2;
+document.getElementById("demo2").innerHTML=text2+"<br> "+answer;
+
+//object.seal() prevent add and delete but can mod
+
+//object.freeze() prevent add,delete, and mod
