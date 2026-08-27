@@ -3,6 +3,7 @@ class Car {
         this.name=name;
         this.year=year;
     }
+
 }
 
 const myCar1=new Car("Audi", 2020);
@@ -30,3 +31,23 @@ document.getElementById("demo1").innerHTML= "My "+
 myLaptop.name+" laptop is "+myLaptop.age()+" years old"+
 "<br>"+"My new "+mylaptop2.name+" laptop is "+mylaptop2.age()+
 " years old";
+
+
+class MObile{
+    constructor(name,year){
+        this.name=name;
+        this.year=year;
+    }
+    age(x){
+        return x-this.year
+    }
+}
+const date = new Date();
+let year=date.getFullYear();
+
+const myMobile=new MObile("nokia", "2004");
+
+document.getElementById("demo3").innerHTML="My Phone is "+
+myMobile.age(year)+ " years old.";
+
+
