@@ -23,3 +23,23 @@ myfavtPlayer.playerName+ ", who plays for: "+ myfavtPlayer.clubName+
 
 document.getElementById("demo1").innerHTML="Messi's nationality is: "+
 myfavtPlayer.nationality+"<br>"+"Messi's Language is: "+myfavtPlayer.language;
+
+
+
+//Prototype allows to add new methods to object constructors
+
+function person(first,last,age,eye){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.eye=eye;
+}
+
+person.prototype.name=function(){
+    return this.firstName+" "+this.lastName
+};
+
+const myFather=new person("Abdul","Kadir","70","black");
+
+document.getElementById("demo2").innerHTML=myFather.name();
+
