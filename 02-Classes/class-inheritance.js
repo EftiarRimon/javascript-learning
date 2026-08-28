@@ -1,3 +1,5 @@
+
+//class inheritance
 class Car{
     constructor(brand){
         this.carName=brand;
@@ -20,3 +22,21 @@ class Model extends Car{
 const myCar=new Model("Ford","toyota");
 
 document.getElementById("demo").innerHTML=myCar.show();
+
+
+//Use getters and setters in class
+
+class football{
+    constructor(brand){
+        this.footballBrand=brand;
+    }
+    get fBrandName(){
+        return this.footballBrand;
+    }
+    set fBrandName(x){
+        this.fBrandName=x;
+    }
+}
+const myFootball=new football("trionda");
+
+document.getElementById("demo2").innerHTML=myFootball.fBrandName;
