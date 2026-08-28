@@ -34,9 +34,15 @@ class football{
         return this.footballBrand;
     }
     set fBrandName(x){
-        this.fBrandName=x;
+        this.footballBrand=x;
     }
 }
 const myFootball=new football("trionda");
 
+//use setter to change the BALLNAME 
+myFootball.fBrandName="telstar";
+
 document.getElementById("demo2").innerHTML=myFootball.fBrandName;
+
+
+
