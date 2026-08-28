@@ -46,3 +46,11 @@ document.getElementById("demo2").innerHTML=myFootball.fBrandName;
 
 
 
+class Player{
+    constructor(name){
+        this.playerName=name;
+    }
+}
+const myPlayer = new Player("messi");
+document.getElementById("demo3").innerHTML=myPlayer.playerName;
+
