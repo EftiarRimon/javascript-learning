@@ -20,3 +20,31 @@ function display1(message1){
 }
 
 calculate(3,display1);
+
+
+
+//Synchronous Callbacks
+
+function hisheb(x,y,operation){
+    return operation(x,y);
+}
+function add(a,b){
+    return a+b;
+}
+
+let result=hisheb(10,33,add);
+
+document.getElementById("demo3").innerHTML=result;
+
+
+
+
+//TIMING PROBLEM
+let result1;
+
+setTimeout(function(){
+    result1=5;
+},1000);
+document.getElementById("demo4").innerHTML="the result is "+result1
+
+
