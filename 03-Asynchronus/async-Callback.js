@@ -47,4 +47,15 @@ setTimeout(function(){
 },1000);
 document.getElementById("demo4").innerHTML="the result is "+result1
 
+//solution of timing problem
+function myDisplayer(some){
+    document.getElementById("demo5").innerHTML+=some+" ";
+}
+function done(value){
+    myDisplayer(value);
+}
+
+setTimeout(function(){
+    done(5);
+},2000);
 
