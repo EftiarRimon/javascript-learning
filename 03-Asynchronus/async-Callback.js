@@ -75,3 +75,35 @@ function displayDate(){
     document.getElementById("demo7").innerHTML+=Date();
 }
 document.getElementById("myButton").addEventListener("click",displayDate);
+
+
+//SEQUENCE CONTROL
+
+
+function myDisplayer2(someData){
+    document.getElementById("demo8").innerHTML=someData;
+}
+
+//function to CALCULATE
+
+function myCalculator(num1,num2){
+    let sum=num1+num2;
+    return sum;
+}
+
+let result2 =myCalculator(8,9);
+
+myDisplayer2(result2);
+
+//Sequence control 2
+
+function myDisplayer3(some){
+    document.getElementById("demo9").innerHTML=some;
+}
+
+function myCalculator1(number1,number2){
+    let mul=number1*number2;
+    myDisplayer3(mul);
+}
+
+myCalculator1(4,5);
