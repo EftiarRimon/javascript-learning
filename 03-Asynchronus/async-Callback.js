@@ -59,3 +59,19 @@ setTimeout(function(){
     done(5);
 },2000);
 
+
+//asynchronus CAllback
+//Event Handling
+function myDisplayer1(text){
+        document.getElementById("demo6").innerHTML=text;
+}
+setTimeout(function(){
+    myDisplayer1("Time finished")
+
+},4000);
+
+
+function displayDate(){
+    document.getElementById("demo7").innerHTML+=Date();
+}
+document.getElementById("myButton").addEventListener("click",displayDate);
