@@ -107,3 +107,73 @@ function myCalculator1(number1,number2){
 }
 
 myCalculator1(4,5);
+
+
+
+//CALLBACk
+
+function myDisplayer2(someValue){
+    document.getElementById("demo10").innerHTML=someValue;
+}
+
+function myCalculator2(numb1,numb2,myCallback2){
+    let jog=numb1+numb2;
+    myCallback2(jog);
+}
+
+myCalculator2(5,5,myDisplayer2);
+
+
+
+
+
+
+
+function myPrint(output){
+    document.getElementById("demo11").innerHTML=output;
+}
+
+function myCal(n1,n2,callBack){
+    summation=n1+n2;
+    callBack(summation);
+}
+
+myCal(3,4,myPrint);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
