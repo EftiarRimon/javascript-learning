@@ -75,3 +75,22 @@ step1()
 .then(function(value){
     return myDisplayerNew(value)
 });
+
+
+
+//Use catch to Handle Errors
+
+fetch("missing.txt")
+.then(function(response){
+    if(!response.ok){
+        throw new Error(response.status);
+    }
+    return response.text();
+})
+.catch(function (error){
+myDisplayerNew2(error.message)
+});
+function myDisplayerNew2(textt){
+    document.getElementById("demo5").textContent =textt;
+}
+
