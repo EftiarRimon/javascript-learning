@@ -8,6 +8,9 @@ fetch("03-Asynchronus/message.txt")
 .catch(function(error){
     myDisplayer(error);
 })
+.finally(function() {
+  myDisplayer("Finished!");
+});
 
 function myDisplayer(fileErVitoreJaAche){
 console.log(fileErVitoreJaAche);
@@ -45,3 +48,30 @@ function myDisplayerReject(text){
     document.getElementById("demo2").innerHTML=text;
 }
 
+
+//Running Functions in Steps
+
+function myDisplayerNew(some){
+    document.getElementById("demo3").innerHTML=some;
+}
+
+function step1(){
+    return Promise.resolve("A")
+};
+function step2(value){
+    return Promise.resolve(value+"B")
+};
+function step3(value){
+    return Promise.resolve(value+"C")
+};
+
+step1()
+.then(function(value){
+    return step2(value)
+})
+.then(function(value){
+    return step3(value)
+})
+.then(function(value){
+    return myDisplayerNew(value)
+});
