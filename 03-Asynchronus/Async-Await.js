@@ -39,12 +39,32 @@ function myDisplayer2(text2){
 myDisplayer2("Task: START --> ");
 
 async function GetData() {
-    await fetch("03-Asynchronus/fetch.txt");
-    myDisplayer2("Task: COMPLETED!");
+    let s=await fetch("03-Asynchronus/fetch.txt");
+    myDisplayer2(await s.text());
 }
 
 GetData();
 
 myDisplayer2("CONTINIUE")
 
+
+//ASYNC MULTIPLE
+
+function myDisplayer3(text3){
+    document.getElementById("demo3").innerHTML+=text3+"<br>";
+}
+
+async function getData1() {
+   let a = await fetch("03-Asynchronus/fetch.txt");
+   myDisplayer3(await a.text());
+
+   let b = await fetch("03-Asynchronus/hello.txt");
+    myDisplayer3(await b.text());
+
+    let c = await fetch("03-Asynchronus/message.txt");
+    myDisplayer3(await c.text());
+    
+}
+
+getData1();
 
