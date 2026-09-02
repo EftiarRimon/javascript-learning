@@ -94,3 +94,16 @@ function myDisplayerNew2(textt){
     document.getElementById("demo5").textContent =textt;
 }
 
+
+myDisplayer4("Start");
+
+fetch("03-Asynchronus/message.txt")
+.then(function(){
+    myDisplayer4("END!")
+});
+
+myDisplayer4("Running. . . .")
+
+function myDisplayer4(text){
+    document.getElementById("demo6").innerHTML+=text+"<br>";
+}
