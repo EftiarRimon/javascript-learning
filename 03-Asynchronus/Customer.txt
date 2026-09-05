@@ -1,0 +1,4 @@
+Name : Rimon
+ID : 2355
+address : Shagufta R/A, Mirpur 12, Dhaka, Bangladesh
+membership : YES

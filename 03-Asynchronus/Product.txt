@@ -1,0 +1,3 @@
+id:1, Name:Laptop, price:50000/-
+id:2, Name:Desktop, Price:30000/-
+id:3, Name:Ac, Price: 20000/-
