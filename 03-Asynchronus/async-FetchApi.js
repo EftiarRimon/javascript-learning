@@ -21,3 +21,17 @@ loadText1("03-Asynchronus/fetch.txt");
 function myDisplayer1(text1){
     document.getElementById("demo2").innerHTML=text1
 }
+
+
+async function loadCustomer() {
+    const response2=await fetch("03-Asynchronus/customer.json");
+    const customer=await response2.json();
+
+    myDisplayer2(customer.name)
+}
+
+loadCustomer();
+
+function myDisplayer2(text){
+    document.getElementById("demo3").innerHTML+=text;
+}
