@@ -60,3 +60,38 @@ loadMultipleData();
 function myDisplayer3(text){
     document.getElementById("demo3").innerHTML+=text+"<br>";
 }
+
+//<<----Response Status----->>
+async function loadTextTest(file) {
+    const response = await fetch(file);
+    myDisplayer4(response.ok);
+}
+
+loadTextTest("03-Asynchronus/fetch.txt");
+
+function myDisplayer4(textTest){
+    document.getElementById("demo4").innerHTML=textTest;
+}
+
+//<<----fetch api handling error----->>
+
+async function loadFileErrorHndl(file) {
+
+    try {
+        const response = await fetch(file);
+
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+
+        myDisplayer5(await response.text());
+
+    } catch (err) {
+        myDisplayer5(err.message);
+    }
+}
+loadFileErrorHndl("03-Asynchronus/fetchh.txt");
+
+function myDisplayer5(text){
+    document.getElementById("demo5").innerHTML=text;
+}
