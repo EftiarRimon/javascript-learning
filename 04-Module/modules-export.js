@@ -14,3 +14,11 @@ document.getElementById("demo").innerHTML=PI+"<br>"+"addition is: "
 "multiplication is: "+mul+"<br>"+"divition is: "+div;
 
 
+
+
+//Combining Default + Named-------------------------//
+
+import Capital,{textLength,format} from "./parser.js";
+
+let text ="Eftiare Ahmed Rimon"
+document.getElementById("demo1").innerHTML=Capital(text)+"<br>"+textLength(text)+"<br>"+format(text);
