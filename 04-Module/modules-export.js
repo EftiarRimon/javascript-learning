@@ -1,5 +1,6 @@
 //Export-------------------//
 import { PI, substract,multiply,divide } from "./math.js"
+//import * as math from "./math.js"
 
 //Default Export---------------------//
 import addd from"./math.js"
