@@ -1,2 +1,4 @@
-export const name="Eftiare";
-export const age=28;
+const name="Eftiare";
+const age=28;
+
+export{name,age};
