@@ -16,13 +16,35 @@
     <h6>Messi</h6>
     <h6>Ronaldo</h6>
     <h6>Neymar</h6>
+    <h6>Neymar</h6>
+
+    <button onclick="myFunction()">Color</button>
+    <button onclick="myFunction2()">color2</button>
 
     <script>
         const myCollection=document.getElementsByTagName("p");
-        const myCollection1=document.getElementsByTagName("h6");
 
         document.getElementById("demo").innerHTML+="the inner html is: "+myCollection[2].innerHTML+"<br>";
-        document.getElementById("demo").innerHTML+="the inner html of h6 is: "+myCollection1[2].innerHTML;
+        const myNodeList=document.querySelectorAll("p");
+        function myFunction(){
+            const myColorCollection=document.getElementsByTagName("h6");
+            
+            for(let i=0;
+                i<myColorCollection.length;
+                i++ )
+                {myColorCollection[i].style.color="red"}
+        }
+
+        function myFunction2(){
+            for(
+                let i=0;
+                i<myCollection.length;
+                i++
+            )
+            {myCollection[i].style.color="blue"}
+        }
+        
+        document.getElementById("demo").innerHTML=myNodeList.length+" "+myCollection.length;
 
     </script>
 </body>
