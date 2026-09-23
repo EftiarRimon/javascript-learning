@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>HTML DOM</h2>
+    <p>Fc Barcelona</p>
+    <p>Real Madrid</p>
+    <p>Atletico Madrid</p>
+    <p id="demo"></p>
+
+    <h6>Messi</h6>
+    <h6>Ronaldo</h6>
+    <h6>Neymar</h6>
+
+    <script>
+        const myCollection=document.getElementsByTagName("p");
+        const myCollection1=document.getElementsByTagName("h6");
+
+        document.getElementById("demo").innerHTML+="the inner html is: "+myCollection[2].innerHTML+"<br>";
+        document.getElementById("demo").innerHTML+="the inner html of h6 is: "+myCollection1[2].innerHTML;
+
+    </script>
+</body>
+</html>

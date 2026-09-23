@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+<p id="p3">this is 3rd para</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+<button onclick="myFunctionRmvChild()">remove Child element</button>
+<button onclick="myFunctionReplaceChild()">replace child</button>
+
+<script>
+    const para=document.createElement("h1");
+    const node=document.createTextNode("this is new node");
+    para.appendChild(node);
+
+    const element =document.getElementById("div1");
+    const child=document.getElementById("p3");
+    element.insertBefore(para,child)
+
+    function myFunction(){
+        document.getElementById("p3").remove();
+    }
+
+    const parent=document.getElementById("div1");
+    const childNode=document.getElementById("p1")
+    const childNode2=document.getElementById("p2");
+    const childNode3=document.getElementById("p3")
+
+    function myFunctionRmvChild(){
+        parent.removeChild(childNode);
+    }
+
+    function myFunctionReplaceChild(){
+        parent.replaceChild(childNode3,childNode2);
+    }
+
+    
+</script>
+</body>
+</html>
